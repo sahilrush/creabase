@@ -1,4 +1,4 @@
-import {initializeApp, getApp, getApps, getApp, cert} from "firebase-admin/app"; 
+import {initializeApp, getApp, getApps, cert, App} from "firebase-admin/app"; 
 
 
 
@@ -7,7 +7,7 @@ import {initializeApp, getApp, getApps, getApp, cert} from "firebase-admin/app";
 
 import { getFirestore } from "firebase-admin/firestore"; 
 
-const serviceKey = require("@/serviceKey.json");    
+const serviceKey = require("@/service_key.json");    
 
 
  let app: App;
@@ -21,5 +21,8 @@ const serviceKey = require("@/serviceKey.json");
  }
 
 
+
  const adminDb = getFirestore(app); 
  export { app as adminApp, adminDb };
+
+ 
